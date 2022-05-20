@@ -35,8 +35,19 @@ android {
 dependencies {
 
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:27.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+//    implementation 'com.android.support:appcompat-v7:26.0.0'
+   implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    def activity_version = "1.4.0"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+//    //noinspection GradleCompatible
+//    implementation "com.android.support:support-v4:23.1.1"
+//    //noinspection GradleCompatible
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation "com.android.support:support-annotations:23.1.1"
+
+
 
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -65,7 +76,7 @@ dependencies {
     def room_version = "2.4.2"
 
     implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
+    annotationProcessor  "androidx.room:room-compiler:$room_version"
 
     // optional - RxJava2 support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
