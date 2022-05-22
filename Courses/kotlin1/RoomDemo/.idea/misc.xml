@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Education/Java/kotlin/Courses/kotlin1/RoomDemo/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Education/Java/kotlin/Courses/kotlin1/RoomDemo/app/src/main/res/layout/recyclerview_raw.xml" value="0.1" />
         <entry key="..\:/Education/kotlin/Courses/kotlin1/RoomDemo/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
       </map>
     </option>
