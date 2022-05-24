@@ -3,8 +3,10 @@ package com.example.roomdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -57,10 +59,12 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
                 val user =
                     UserEntity(nameInput.getTag(nameInput.id).toString().toInt(), name, email)
                 viewModel.updateUserInfo(user)
-                saveButton.setText("Save")
+                saveButton.text = "Save"
+                Log.d("TEST_OF_LOADING_DATA", "dgfhgh")
             }
-            nameInput.setText("")
-            emailInput.setText("")
+            nameInput.text = ""
+            emailInput.text = ""
+
 
         }
 
@@ -72,10 +76,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewAdapter.RowClickListener {
     }
 
     override fun onItemClickListener(user: UserEntity) {
-        nameInput.setText(user.name)
-        emailInput.setText(user.email)
+        nameInput.text = user.name
+        emailInput.text = user.email
         nameInput.setTag(nameInput.id, user.id)
-        saveButton.setText("Update")
+        saveButton.text = "Update"
     }
 }
 //https://www.youtube.com/watch?v=aK9tOipNm0o&t=0s
+//https://www.youtube.com/watch?v=WHfOErTraTk - about warnings
+//org.gradle.warning.mode=all - for searching warning
+//org.gradle.warning.mode=fail - for searching warning

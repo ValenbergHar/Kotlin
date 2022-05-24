@@ -7,11 +7,7 @@ import com.example.roomdemo.db.RoomAppDb
 import com.example.roomdemo.db.UserEntity
 
 class MainActivityViewModel(app: Application) : AndroidViewModel(app) {
-    lateinit var allUsers: MutableLiveData<List<UserEntity>>
-
-    init {
-        allUsers = MutableLiveData()
-    }
+     private var allUsers: MutableLiveData<List<UserEntity>> = MutableLiveData()
 
     fun getAllUserObservers(): MutableLiveData<List<UserEntity>> {
         return allUsers
