@@ -3,43 +3,43 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolBarStates"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
 
-    <Button
+        android:alpha="0.6"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_map" />
+
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPolackKniastva"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:text="полацкая княства"
+        android:text="@string/polack_kn"
         android:textSize="20sp"
-        app:cornerRadius="8dp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolBarStates"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/colorPrimary"
         app:strokeColor="@color/colorPrimary"
         app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btnVKL"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="330dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:text="вялікае княства літоўскае"
+        android:text="@string/vkl"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,11 +51,11 @@
 
     <Button
         android:id="@+id/btnRP"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="330dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:text="рэч паспалітая абодвух народаў"
+        android:text="@string/rp"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,11 +67,11 @@
 
     <Button
         android:id="@+id/btnRusOcc"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:text="расейская акупацыя"
+        android:text="@string/raska"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="10dp"
-        android:text="беларуская народная рэспубліка"
+        android:text="@string/bnr"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +104,7 @@
         android:layout_width="160dp"
         android:layout_height="68dp"
         android:layout_marginTop="10dp"
-        android:text="заходняя беларусь"
+        android:text="@string/zakh_bel"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="@+id/btnBNR"
@@ -118,7 +118,7 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="160dp"
         android:layout_height="68dp"
-        android:text="БССР"
+        android:text="@string/bssr"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="@+id/btnBNR"
@@ -133,7 +133,7 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:text="нацысцкая акупацыя"
+        android:text="@string/naz"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +149,7 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:text="БССР"
+        android:text="@string/bssr"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
