@@ -7,23 +7,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:alpha="0.6"
+        android:alpha="0.3"
         android:scaleType="centerCrop"
-        android:src="@drawable/main_map" />
+        android:src="@drawable/hrodna_cundt"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="80dp" />
 
-
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnPolackKniastva"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:text="@string/polack_kn"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +39,7 @@
     <Button
         android:id="@+id/btnVKL"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="330dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -50,17 +54,153 @@
         app:strokeWidth="2dp" />
 
     <Button
+        android:id="@+id/btnXIII"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XIII"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVKL"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnXIV"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/XIV"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXIII"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnXV"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XV"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXIV"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnXVI"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XVI"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXV"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
         android:id="@+id/btnRP"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="330dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:text="@string/rp"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVKL"
+        app:layout_constraintTop_toBottomOf="@+id/btnXVI"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnXVIr"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:visibility="gone"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XVIr"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRP"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+
+    <Button
+        android:id="@+id/btnXVII"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:visibility="gone"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XVII"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXVIr"
+        app:rippleColor="@color/colorPrimary"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnXVIII"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:visibility="gone"
+        android:layout_width="330dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/XVIII"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnXVII"
         app:rippleColor="@color/colorPrimary"
         app:strokeColor="@color/colorPrimary"
         app:strokeWidth="2dp" />
@@ -72,19 +212,21 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:text="@string/raska"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRP"
+        app:layout_constraintTop_toBottomOf="@+id/btnXVIII"
         app:rippleColor="@color/colorPrimary"
         app:strokeColor="@color/colorPrimary"
         app:strokeWidth="2dp" />
 
-
     <Button
         android:id="@+id/btnBNR"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="330dp"
         android:layout_height="70dp"
         android:layout_marginTop="10dp"
@@ -100,11 +242,13 @@
 
     <Button
         android:id="@+id/btnZahBiel"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="160dp"
         android:layout_height="68dp"
         android:layout_marginTop="10dp"
         android:text="@string/zakh_bel"
+
         android:textSize="20sp"
         app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="@+id/btnBNR"
@@ -115,7 +259,8 @@
 
     <Button
         android:id="@+id/btnBSSRFirst"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="160dp"
         android:layout_height="68dp"
         android:text="@string/bssr"
@@ -129,7 +274,8 @@
 
     <Button
         android:id="@+id/btnNacOcc"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -145,7 +291,8 @@
 
     <Button
         android:id="@+id/btnBSSRSecond"
-        style="?attr/materialButtonOutlinedStyle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:textColor="@color/colorPrimary"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
