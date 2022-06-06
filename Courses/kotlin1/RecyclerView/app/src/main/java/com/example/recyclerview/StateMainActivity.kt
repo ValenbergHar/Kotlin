@@ -26,6 +26,8 @@ class StateMainActivity : AppCompatActivity() {
     private var btnBSSRFirst: Button? = null
     private var btnNacOcc: Button? = null
     private var btnBSSRSecond: Button? = null
+    private var i1 = 1
+    private var i2 = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,22 +59,35 @@ class StateMainActivity : AppCompatActivity() {
 
 
         btnVKL?.setOnClickListener {
-            btnXIII?.visibility = View.VISIBLE
-            btnXIV?.visibility = View.VISIBLE
-            btnXV?.visibility = View.VISIBLE
-            btnXVI?.visibility = View.VISIBLE
+            i1++
+            if (i1 % 2 == 0) {
+                btnXIII?.visibility = View.VISIBLE
+                btnXIV?.visibility = View.VISIBLE
+                btnXV?.visibility = View.VISIBLE
+                btnXVI?.visibility = View.VISIBLE
+            } else {
+                btnXIII?.visibility = View.GONE
+                btnXIV?.visibility = View.GONE
+                btnXV?.visibility = View.GONE
+                btnXVI?.visibility = View.GONE
+
+            }
+
         }
 
         btnRP?.setOnClickListener {
-            btnXVIr?.visibility = View.VISIBLE
-            btnXVII?.visibility = View.VISIBLE
-            btnXVIII?.visibility = View.VISIBLE
+            i2++
+            if (i2 % 2 == 0) {
+                btnXVIr?.visibility = View.VISIBLE
+                btnXVII?.visibility = View.VISIBLE
+                btnXVIII?.visibility = View.VISIBLE
+            } else {
+                btnXVIr?.visibility = View.GONE
+                btnXVII?.visibility = View.GONE
+                btnXVIII?.visibility = View.GONE
+
+            }
         }
-
-
-
-
-
 
 
     }
