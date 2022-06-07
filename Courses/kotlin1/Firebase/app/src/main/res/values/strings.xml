@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Firebase</string>
+    <string name="polack_kn">ПОЛАЦКАЕ КНЯСТВА</string>
+    <string name="vkl">ВЯЛІКАЕ КНЯСТВА ЛІТОЎСКАЕ</string>
+    <string name="rp">РЭЧ ПАСПАЛІТАЯ АБОДЗЬВУХ НАРОДАЎ</string>
+    <string name="raska">РАСЕЙСКАЯ АКУПАЦЫЯ</string>
+    <string name="bnr">БЕЛАРУСКАЯ НАРОДНАЯ РЭСПУБЛІКА</string>
+    <string name="zakh_bel">ЗАХОДНЯЯ БЕЛАРУСЬ</string>
+    <string name="bssr">БССР</string>
+    <string name="naz">НАЦЫСЦКАЯ АКУПАЦЫЯ</string>
+    <string name="XIII">XIII</string>
+    <string name="XIV">XIV</string>
+    <string name="XV">XV</string>
+    <string name="XVI">XVI</string>
+    <string name="XVIr">XVI</string>
+    <string name="XVII">XVII</string>
+    <string name="XVIII">XVIII</string>
+</resources>
