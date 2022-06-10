@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -24,6 +25,7 @@ class PhoneAuthentication : AppCompatActivity() {
     lateinit var verifiTxt: EditText
     lateinit var progress: ProgressBar
     var verificationId =""
+    val KEY_VERIFICATION_ID = "key_verification_id"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,9 @@ class PhoneAuthentication : AppCompatActivity() {
         phnNoTxt = findViewById(R.id.phnNoTxt)
         verifiTxt = findViewById(R.id.verifiTxt)
         progress = findViewById(R.id.progress)
+        if (verificationId == null && savedInstanceState != null) {
+            onRestoreInstanceState(savedInstanceState);
+        }
 
         veriBtn.setOnClickListener { view: View? ->
             progress.visibility = View.VISIBLE
@@ -120,5 +125,15 @@ class PhoneAuthentication : AppCompatActivity() {
 
     private fun toast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        outState.putString(KEY_VERIFICATION_ID, verificationId)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        verificationId = savedInstanceState.getString(KEY_VERIFICATION_ID).toString()
     }
 }
