@@ -1,6 +1,8 @@
 package com.example.firebase
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -42,12 +44,13 @@ class PhoneAuthentication : AppCompatActivity() {
     private fun verificationCallbacks() {
         mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
+                Log.d(TAG, "onVerificationCompleted")
                 progress.visibility = View.INVISIBLE
-                signInWithPhoneAuthCredential(credential)
+
             }
 
-            override fun onVerificationFailed(p0: FirebaseException) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            override fun onVerificationFailed(e: FirebaseException) {
+                Log.w(TAG, "onVerificationFailed", e)
             }
 
             override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
