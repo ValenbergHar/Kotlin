@@ -1,7 +1,9 @@
 package com.example.firebaseemail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
@@ -14,20 +16,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-//        val email = findViewById<TextInputEditText>(R.id.login_email)
-//        val password = findViewById<TextInputEditText>(R.id.login_password)
-//        val registerBtn = findViewById<Button>(R.id.register_button)
-//
-//        registerBtn.setOnClickListener {
-//            ref.createUserWithEmailAndPassword(
-//
-//                email.text.toString().trim(),
-//                password.text.toString().trim()
-//            )
-//        }
-
-
+    }
+    fun logout(view: View){
+        FirebaseAuth.getInstance().signOut()
+        startActivity(Intent(this, Login::class.java))
+        finish()
     }
 }
 
