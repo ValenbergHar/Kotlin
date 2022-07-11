@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.history
 
 import android.os.Bundle
 import android.widget.Toast

@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.history
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -95,5 +95,14 @@ class StateMainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+
+
+val clickListener = View.OnClickListener { view ->
+
+
+
+}
+
+
     }
 }

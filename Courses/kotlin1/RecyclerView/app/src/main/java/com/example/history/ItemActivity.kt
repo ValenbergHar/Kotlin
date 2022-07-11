@@ -1,4 +1,4 @@
-package com.example.recyclerview
+package com.example.history
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
