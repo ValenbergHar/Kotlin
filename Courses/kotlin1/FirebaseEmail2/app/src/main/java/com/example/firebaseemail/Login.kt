@@ -1,5 +1,6 @@
 package com.example.firebaseemail
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,8 @@ class Login : AppCompatActivity() {
     lateinit var login_forgot: Button
     lateinit var mAuth: FirebaseAuth
     lateinit var login_progress: ProgressBar
+    lateinit var resetMail: EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,11 +71,41 @@ class Login : AppCompatActivity() {
 
 
         login_forgot.setOnClickListener { it ->
-            val password: AlertDialog.Builder = AlertDialog.Builder(it)
+
+            resetMail = EditText(it.context)
+            val passwordResetDialog = AlertDialog.Builder(it.context)
+            passwordResetDialog.setTitle("Reset Password?")
+            passwordResetDialog.setMessage("Enter Your Email To Receive Reset Ling.")
+            passwordResetDialog.setView(resetMail)
+
+            passwordResetDialog.setPositiveButton(
+                "YES", DialogInterface.OnClickListener{ dialog, id ->positiveButtonClick() })
+            passwordResetDialog.setNegativeButton(
+                "NO", DialogInterface.OnClickListener{dialog, id ->negativeButtonClick() }
+            )
 
 
-            val resetMail: EditText= EditText()
+            passwordResetDialog.create().show()
+        }
+
+
+    }
+
+    private fun negativeButtonClick() {
+
+
+    }
+
+
+
+    private fun positiveButtonClick() {
+        val mail: String = resetMail.text.toString()
+        mAuth.sendPasswordResetEmail(mail).addOnSuccessListener {
+            Toast.makeText(applicationContext, "Reset link Sent To Your Email", Toast.LENGTH_LONG).show()
+        }.addOnFailureListener{
+            Toast.makeText(applicationContext, "Error!", Toast.LENGTH_LONG).show()
         }
     }
 }
+
 

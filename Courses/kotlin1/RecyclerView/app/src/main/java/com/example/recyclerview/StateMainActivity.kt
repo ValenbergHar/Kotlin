@@ -1,5 +1,6 @@
 package com.example.recyclerview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -90,5 +91,9 @@ class StateMainActivity : AppCompatActivity() {
         }
 
 
+        btnPolackaeKniastva?.setOnClickListener{
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

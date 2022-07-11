@@ -28,3 +28,4 @@ class MainActivity : AppCompatActivity() {
 // firebase connection https://www.youtube.com/watch?v=SxkKLMKTDs0
 // sha1 https://www.youtube.com/watch?v=ZPrKGjGDLtY
 //https://www.youtube.com/watch?v=tbh9YaWPKKs
+//https://www.youtube.com/c/Foxandroid01/playlists

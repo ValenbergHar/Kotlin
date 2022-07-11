@@ -12,9 +12,6 @@ class SecondActivity : AppCompatActivity() {
     private var adapter: RecyclerViewAdapter? = null
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
@@ -26,15 +23,11 @@ class SecondActivity : AppCompatActivity() {
         adapter = RecyclerViewAdapter()
         recyclerView.adapter = adapter
 
-
         // onItemClickListener
         adapter!!.setOnItemClickListener(object : RecyclerViewAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
                 Toast.makeText(this@SecondActivity, "Item $position", Toast.LENGTH_LONG).show()
-
-
             }
-
         })
 
     }
