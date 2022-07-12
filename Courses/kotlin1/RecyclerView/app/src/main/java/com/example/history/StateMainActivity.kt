@@ -97,11 +97,8 @@ class StateMainActivity : AppCompatActivity() {
         }
 
 
-val clickListener = View.OnClickListener { view ->
-
-
-
-}
+//val clickListener = View.OnClickListener { view ->
+//}
 
 
     }
