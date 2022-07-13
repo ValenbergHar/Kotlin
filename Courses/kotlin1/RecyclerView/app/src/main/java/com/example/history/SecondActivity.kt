@@ -1,6 +1,8 @@
 package com.example.history
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,8 +12,8 @@ import com.google.firebase.database.*
 
 class SecondActivity : AppCompatActivity() {
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerViewAdapter? = null
+    private lateinit  var layoutManager: RecyclerView.LayoutManager
+    private lateinit var recyclerView: RecyclerView
 
     private lateinit var dbRef: DatabaseReference
     private lateinit var itemPartList: ArrayList<ItemPart>
@@ -22,21 +24,18 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
 
         layoutManager = LinearLayoutManager(this)
-        val recyclerView = findViewById<RecyclerView>(R.id.recycleView)
+        recyclerView = findViewById(R.id.recycleView)
         recyclerView.layoutManager = layoutManager
-
-
-        recyclerView.adapter = adapter
-
         itemPartList = arrayListOf()
+
         getItemPartData()
 
         // onItemClickListener
-        adapter!!.setOnItemClickListener(object : RecyclerViewAdapter.onItemClickListener {
-            override fun onItemClick(position: Int) {
-                Toast.makeText(this@SecondActivity, "Item $position", Toast.LENGTH_LONG).show()
-            }
-        })
+//        adapter!!.setOnItemClickListener(object : RecyclerViewAdapter.onItemClickListener {
+//            override fun onItemClick(position: Int) {
+//                Toast.makeText(this@SecondActivity, "Item $position", Toast.LENGTH_LONG).show()
+//            }
+//        })
 
     }
 
@@ -48,8 +47,9 @@ class SecondActivity : AppCompatActivity() {
                     for (itemSnapshot in snapshot.children) {
                         val item = itemSnapshot.getValue(ItemPart::class.java)
                         itemPartList.add(item!!)
+
                     }
-                    adapter = RecyclerViewAdapter(itemPartList)
+                    recyclerView.adapter = RecyclerViewAdapter(itemPartList)
                 }
             }
 

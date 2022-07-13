@@ -1,6 +1,7 @@
 package com.example.history
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,37 +12,35 @@ import com.example.history.firebase.ItemPart
 
 class RecyclerViewAdapter(private val itemList: ArrayList<ItemPart>) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     //onItemClickListener
-    private  var currentItemPos: Int =0
-    private lateinit var mListener: onItemClickListener
+//      private lateinit var mListener: onItemClickListener
 
 
 
-    interface onItemClickListener {
-        fun onItemClick(position: Int)
-    }
+//    interface onItemClickListener {
+//        fun onItemClick(position: Int)
+//    }
 
-    fun setOnItemClickListener(listener: onItemClickListener) {
-        mListener = listener
-    }
+//    fun setOnItemClickListener(listener: onItemClickListener) {
+//        mListener = listener
+//    }
 
 
     // onItemClickListener
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup,viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
-        return ViewHolder(v, mListener)
+        return ViewHolder(v,
+//            mListener
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        Log.d("qqqqq", "my Message")
         val currentItem = itemList[position]
         holder.itemTitle.text = currentItem.itemTitle
         holder.itemDate.text = currentItem.itemDate
         holder.itemDetail.text = currentItem.itemDetail
-        holder.itemImage.setImageResource(images[position])
+//        holder.itemImage.setImageResource(images[position])
 
     }
 
@@ -50,22 +49,21 @@ class RecyclerViewAdapter(private val itemList: ArrayList<ItemPart>) : RecyclerV
     }
 
 
-    inner class ViewHolder(itemView: View, listener: onItemClickListener) :
-        RecyclerView.ViewHolder(itemView) {
-        var itemImage: ImageView
-        var itemDate: TextView
-        var itemTitle: TextView
-        var itemDetail: TextView
+    inner class ViewHolder(itemView: View,
+//                           listener: onItemClickListener
+    ) :RecyclerView.ViewHolder(itemView) {
+//        var itemImage: ImageView
 
-        init {
-            itemImage = itemView.findViewById(R.id.itemImage)
-            itemTitle = itemView.findViewById(R.id.itemTitle)
-            itemDate = itemView.findViewById(R.id.itemDate)
-            itemDetail = itemView.findViewById(R.id.itemDetail)
+//           var itemImage = itemView.findViewById(R.id.itemImage)
+            var itemTitle: TextView = itemView.findViewById(R.id.itemTitle)
+            var itemDate: TextView  = itemView.findViewById(R.id.itemDate)
+            var  itemDetail : TextView = itemView.findViewById(R.id.itemDetail)
 
-            itemView.setOnClickListener {
-                listener.onItemClick(adapterPosition)
-            }
-        }
+//
+//            itemView.setOnClickListener {
+//
+//            listener.onItemClick(adapterPosition)
+//            }
+
     }
 }
